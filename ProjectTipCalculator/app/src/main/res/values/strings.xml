@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Project Tip Calculator</string>
+    <string name="amount">Amount</string>
+    <string name="_100_00">100.00</string>
+    <string name="tip">TIP %</string>
+    <string name="minusTipPercent">-</string>
+    <string name="tipPercent">0%</string>
+    <string name="plusTipPercent">+</string>
+    <string name="people">PEOPLE</string>
+    <string name="minusPeople">-</string>
+    <string name="peopleNum">1</string>
+    <string name="plusPeople">+</string>
+    <string name="calculate_tip">CALCULATE TIP</string>
+    <string name="tipCount">Tip</string>
+    <string name="press_calculate_tip">Press CALCULATE TIP</string>
+    <string name="total">Total</string>
+    <string name="press_calculate_tip2">Press CALCULATE TIP</string>
+</resources>
