@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                     billInit = Math.round(billInit);
                     billInit = billInit/100;
                     //show the formatted bill
-                    et_Amount.setText(String.format(Locale.getDefault(), "0.2f", billInit));
+                    et_Amount.setText(String.format(Locale.getDefault(), "%0.2f", billInit));
 
                     //calculate the tip
                     tipOutput = (billInit * tipPercent) / 100;
@@ -60,20 +60,21 @@ public class MainActivity extends AppCompatActivity {
 
                     if (peopleCount == 1){
                     //show the total tip
-                    tv_tip_output.setText(String.format(Locale.getDefault(), "0.2f", tipOutput));
+                    tv_tip_output.setText(String.format(Locale.getDefault(), "%0.2f", tipOutput));
 
                     //show the total bill including the tip
                     totalOutput = billInit + tipOutput;
-                    tv_total_output.setText(String.format(Locale.getDefault(), "0.2f", totalOutput));
+                    tv_total_output.setText(String.format(Locale.getDefault(), "" +
+                            "%0.2f", totalOutput));
                 } else {
                         //show the total bill including the tip
                         totalOutput = billInit + tipOutput;
                         totalOutput = totalOutput / peopleCount;
-                        tv_total_output.setText(String.format(Locale.getDefault(), "0.2f", totalOutput) + " per person");
+                        tv_total_output.setText(String.format(Locale.getDefault(), "%0.2f", totalOutput) + " per person");
 
                         //show the total tip
                         tipOutput = tipOutput / peopleCount;
-                        tv_tip_output.setText(String.format(Locale.getDefault(), "0.2f", tipOutput) + " per person");
+                        tv_tip_output.setText(String.format(Locale.getDefault(), "%0.2f", tipOutput) + " per person");
                     }
                 }
             }
