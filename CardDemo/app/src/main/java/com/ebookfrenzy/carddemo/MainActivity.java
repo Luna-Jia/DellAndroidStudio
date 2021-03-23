@@ -1,5 +1,6 @@
 package com.ebookfrenzy.carddemo;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,6 +8,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -22,19 +24,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
         recyclerView = findViewById(R.id.recyclerView);
-
         layoutManager = new GridLayoutManager(this,2);
         recyclerView.setLayoutManager(layoutManager);
-
         adapter = new RecyclerAdapter();
         recyclerView.setAdapter(adapter);
     }
 
-
-    //THIS IS JUST THE OPTIONS FOR THE MENU NOTHING TO DO WITH THE RECYCLE VIEW
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
